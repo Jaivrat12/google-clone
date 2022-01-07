@@ -84,9 +84,7 @@ header li a {
 .google-logo-wrapper {
     display: flex;
     justify-content: center;
-    min-height: 150px;
-    max-height: 290px;
-    height: calc(100% - 560px);
+    height: clamp(150px, 100% - 560px, 290px);
 }
 
 .google-logo {
@@ -182,6 +180,7 @@ header li a {
 /* LANGUAGES */
 .langs-wrapper {
     flex-grow: 1;
+    padding: 0 20px;
 }
 
 .langs {
@@ -223,4 +222,44 @@ footer a {
 
 .footer-lower > div {
     display: flex;
+}
+
+@media only screen and (max-width: 500px) {
+
+    header ul, #header-links {
+        padding: 0;
+        gap: 8px;
+    }
+    #header-links {
+        gap: 10px;
+    }
+    #header-btns li {
+        padding: 0 !important;
+    }
+    .google-logo-wrapper {
+        max-height: 180px;
+    }
+    .google-logo img {
+        width: clamp(160px, 12rem + 4vw, 272px);
+    }
+    .search-form-wrapper, .langs-wrapper {
+        padding: 8px;
+    }
+    .search-input-wrapper {
+        padding: 2px 4px 2px 8px;
+    }
+    .search-btns {
+        padding-top: 8px;
+    }
+    .footer-upper {
+        padding: 12px 16px;
+    }
+    .footer-lower {
+        padding: 0;
+        justify-content: center;
+    }
+    .footer-lower a {
+        padding: 12px clamp(8px, 0.45rem + 0.5vw, 12px);
+        font-size: 12.5px;
+    }
 }
