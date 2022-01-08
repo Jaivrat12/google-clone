@@ -7,13 +7,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="public/css/style.css">
+        <script src="https://kit.fontawesome.com/777303faba.js" crossorigin="anonymous"></script>
         <script defer src="public/js/script.js"></script>
         <title>Google Clone (2021)</title>
     </head>
 
-    <body>
-        <div id="page">
+    <body class="light-theme">
+        <div class="container">
             <header>
+                <div class="theme-mode">
+                    <input type="checkbox" id="theme-toggle" aria-label="Switch Theme" />
+                    <label for="theme-toggle">
+                        <i class="fas fa-adjust fa-2x"></i>
+                    </label>
+                </div>
                 <ul>
                     <div id="header-links">
                         <li>
@@ -30,7 +37,7 @@
                     <div id="header-btns">
                         <li data-header-btn="google-apps">
                             <a title="Google apps" href="https://about.google/products/">
-                                <svg height="24" width="24" focusable="false" fill="#5f6368" viewBox="0 0 24 24">
+                                <svg height="24" width="24" focusable="false" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path>
                                 </svg>
                             </a>
@@ -104,7 +111,7 @@
                     <div>
                         <a href="https://policies.google.com/privacy" target="_blank">Privacy</a>
                         <a href="https://policies.google.com/terms" target="_blank">Terms</a>
-                        <a>Settings</a>
+                        <a tabindex="0">Settings</a>
                     </div>
                 </div>
             </footer>
